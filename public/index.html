@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+   <!-- <link rel="icon" type="image/x-icon" href="/public/images/r.ico"> -->
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Christ Generals — Worship • Grow • Serve</title>
+  <meta name="description" content="Christ Generals: online worship, Bible study, testimonies, and community." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav-wrap" id="top">
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Christ Generals">
+        <!-- <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd86b"/><stop offset="1" stop-color="#ff5ea2"/></linearGradient></defs>
+          <rect width="24" height="24" rx="6" fill="url(#g)"></rect>
+          <path d="M12 7v10M7 12h10" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg> -->
+        <img class="logo" src="images/logo.png" alt="" style="height:80px; width:auto; vertical-align:middle;">
+        <!-- <span class="brand-text">Christ Generals</span> -->
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Toggle menu">☰</button>
+
+      <ul class="nav-links" id="navList">
+        <li><a href="about.html">About</a></li>
+        <li><a href="#sermons">Sermons</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonies">Testimonies</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO (full-screen with parallax) -->
+  <section class="hero" id="hero" role="banner" aria-label="Welcome">
+    <div class="hero-layer" id="heroLayer"></div>
+    <div class="hero-inner container">
+      <div class="hero-card" data-reveal>
+        <h1>Worship • Grow • Serve</h1>
+        <p class="lead">A warm, vibrant online fellowship. Join our livestream Sundays at 10:30 AM, find a small group, or share a prayer request.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#sermons">Watch Sermons</a>
+          <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-indicator" href="#about" aria-hidden="true">↓</a>
+  </section>
+
+  <main id="main">
+    <!-- ABOUT (left text, right image) -->
+    <section id="about" class="section container about-section" aria-labelledby="aboutTitle">
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <h2 id="aboutTitle">About Christ Generals</h2>
+          <p class="muted">We are a Christ-centered community committed to teaching Scripture, worshiping God, and serving our neighbors. Whether you join online or locally, you'll find authentic relationships, sound biblical teaching, and practical ways to live out your faith.</p>
+
+          <ul class="about-list">
+            <li><strong>Scripture-led</strong> — faithful Bible teaching for real life.</li>
+            <li><strong>Prayerful</strong> — an active prayer ministry serving needs near and far.</li>
+            <li><strong>Missional</strong> — community projects and outreach.</li>
+          </ul>
+
+          <div style="margin-top:18px;">
+            <a class="btn btn-primary" href="#events">Upcoming Events</a>
+            <a class="btn btn-ghost" href="#gallery">View Gallery</a>
+          </div>
+        </div>
+
+        <div class="about-media" data-reveal>
+          <!-- beautiful right-side image with subtle tilt -->
+          <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Fellowship gathering" />
+            <div class="media-tag">Sunday Worship — 10:30 AM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- SERMONS -->
+<section id="sermons" class="section container" aria-labelledby="sermonsTitle">
+  <h2 id="sermonsTitle">Sermons — Recent</h2>
+  <p class="muted">Video teachings delivered by our pastoral team. Watch, reflect, and share.</p>
+
+  <div class="cards-grid" data-reveal>
+    <article class="card">
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Sermon thumbnail">
+        <button class="play-btn" aria-label="Play sermon" data-video="https://www.youtube.com/live/wgtgYwBkP84?si=PtzShFnkF5BLZfOP">▶</button>
+      </div>
+      <div class="card-body">
+        <h3>Walking in Hope</h3>
+        <p class="muted">Pastor Emmanuel — Apr 6, 2025</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1505672678657-cc7037095e2c?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Sermon thumbnail">
+        <button class="play-btn" aria-label="Play sermon" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">▶</button>
+      </div>
+      <div class="card-body">
+        <h3>Grace That Frees</h3>
+        <p class="muted">Pastor Mary — Mar 30, 2025</p>
+      </div>
+    </article>
+     <article class="card">
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1505672678657-cc7037095e2c?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Sermon thumbnail">
+        <button class="play-btn" aria-label="Play sermon" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">▶</button>
+      </div>
+      <div class="card-body">
+        <h3>Grace That Frees</h3>
+        <p class="muted">Pastor Mary — Mar 30, 2025</p>
+      </div>
+    </article>
+     <article class="card">
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1505672678657-cc7037095e2c?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Sermon thumbnail">
+        <button class="play-btn" aria-label="Play sermon" data-video="https://youtu.be/8zuDc18wyiw?si=3-_mNg5cIP18XHe6">▶</button>
+      </div>
+      <div class="card-body">
+        <h3>Grace That Frees</h3>
+        <p class="muted">Pastor Mary — Mar 30, 2025</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1400&auto=format&fit=crop&crop=entropy" alt="Sermon thumbnail">
+        <button class="play-btn" aria-label="Play sermon" data-video="https://www.youtube.com/embed/jfKfPfyJRdk">▶</button>
+      </div>
+      <div class="card-body">
+        <h3>Rooted in Prayer</h3>
+        <p class="muted">Prayer Team — Mar 23, 2025</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SERMON POPUP MODAL -->
+<div class="modal" id="sermonModal" aria-hidden="true">
+  <div class="modal-overlay" data-close="true"></div>
+  <div class="modal-content">
+    <button class="modal-close" data-close="true">&times;</button>
+    <div class="modal-body">
+      <iframe id="sermonVideo" width="100%" height="450"
+        src="" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery-section container" aria-labelledby="galleryTitle">
+      <h2 id="galleryTitle">Gallery</h2>
+      <p class="muted">Moments from worship, outreach, and life together.</p>
+
+      <div class="gallery-grid" id="galleryGrid" data-reveal>
+        <!-- using Unsplash dynamic images for demo -->
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop&crop=entropy">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Worship photo">
+        </button>
+
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop&crop=entropy">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Community outreach">
+        </button>
+
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1755838692094-49a97b9fb9ab?q=80&w=789&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          <img src="https://images.unsplash.com/photo-1755838692094-49a97b9fb9ab?q=80&w=789&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Small group">
+        </button>
+
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop&crop=entropy">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Prayer meeting">
+        </button>
+
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1509099836639-18ba0e4a2f3c?q=80&w=1600&auto=format&fit=crop&crop=entropy">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba0e4a2f3c?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Volunteering">
+        </button>
+
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop&crop=entropy">
+          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Worship band">
+        </button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIES -->
+    <section id="testimonies" class="section container" aria-labelledby="testimonyTitle">
+      <h2 id="testimonyTitle">Stories & Testimonies</h2>
+      <p class="muted">Real life, changed by grace.</p>
+
+      <div class="testimony-grid" data-reveal>
+        <blockquote class="testimony">
+          <p>“I was lost and found hope. The fellowship prayed with me and my life changed.”</p>
+          <cite>— Esther, disciple</cite>
+        </blockquote>
+
+        <blockquote class="testimony">
+          <p>“From anxiety to peace — God's presence here is real.”</p>
+          <cite>— Jonah, volunteer</cite>
+        </blockquote>
+
+        <blockquote class="testimony">
+          <p>“Practical care helped my family get back on its feet. We are grateful.”</p>
+          <cite>— The Martins</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="section container" aria-labelledby="eventsTitle">
+      <h2 id="eventsTitle">Upcoming Events</h2>
+      <p class="muted">Mark your calendar — join us live or online.</p>
+
+      <div class="events-grid" data-reveal>
+        <div class="event-card">
+          <div class="event-date">Sun<br><span>10:30</span></div>
+          <div class="event-body">
+            <h3>Sunday Worship</h3>
+            <p class="muted">Livestream & on-site teaching</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">Wed<br><span>19:00</span></div>
+          <div class="event-body">
+            <h3>Midweek Prayer</h3>
+            <p class="muted">Intercession & small groups</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">Fri<br><span>18:00</span></div>
+          <div class="event-body">
+            <h3>Youth Night</h3>
+            <p class="muted">Young adults & teenagers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- CONTACT -->
+  <section id="contact" class="section container" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Contact & Prayer</h2>
+    <p class="muted">Send a prayer request, ask about joining a group, or get pastoral care.</p>
+
+    <div class="contact-grid" data-reveal>
+      <!-- ===== CONTACT FORM ===== -->
+      <form id="contactForm" class="contact-card" method="POST" novalidate>
+        <div class="field-row">
+          <label class="field">
+            <input name="name" type="text" required placeholder=" " />
+            <span class="label">Full name</span>
+          </label>
+
+          <label class="field">
+            <input name="email" type="email" required placeholder=" " />
+            <span class="label">Email</span>
+          </label>
+        </div>
+
+        <!-- SUBJECT DROPDOWN -->
+        <label class="field" style="background-color: 061122;">
+          <select name="subject" required>
+            <option value="" disabled selected></option>
+            <option value="Prayer Request">🙏 Prayer Request</option>
+            <option value="Gave My Life to Christ">✝️ Gave My Life to Christ</option>
+            <option value="Special Request">⭐ Special Request</option>
+          </select>
+          <span class="label">Subject</span>
+        </label>
+
+        <label class="field">
+          <textarea name="message" rows="6" required placeholder=" "></textarea>
+          <span class="label">Message or prayer request</span>
+        </label>
+
+        <div class="form-row">
+          <button id="sendBtn" class="btn btn-primary" type="submit">
+            <span class="btn-text">Send Message</span>
+            <svg class="btn-spinner" viewBox="0 0 50 50" aria-hidden="true">
+              <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="4"></circle>
+            </svg>
+          </button>
+          <div id="formStatus" role="status" aria-live="polite" class="form-status"></div>
+        </div>
+      </form>
+
+      <!-- ===== CONTACT INFO ===== -->
+      <aside class="aside-card">
+        <h3>Contact Info</h3>
+        <p class="muted"><strong>Email:</strong> connect@yourfellowship.org</p>
+        <p class="muted"><strong>Prayer line:</strong> +1 (555) 555-5555</p>
+        <!-- <hr/> -->
+        <!-- <h4>Visit</h4>
+        <p class="muted">Sunday Worship — 10:30 AM • Online & On-site</p> -->
+      </aside>
+    </div>
+  </section>
+
+        
+  </main>
+
+  <!-- Lightbox for Gallery -->
+  <!-- <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery image">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lb-body"><img id="lbImage" alt=""></div>
+    <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  </div> -->
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Christ Generals — All rights reserved.</p>
+        <p class="muted">Built with care • All are welcome</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

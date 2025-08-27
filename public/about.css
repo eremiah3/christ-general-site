@@ -1,0 +1,169 @@
+/* ============ ABOUT PAGE THEME (keeps your brand, matches the screenshot look) ============ */
+:root{
+  --ink: #061122;
+  --ink-2: #0b1f38;
+  --muted: #cfd6df;
+  --card: #0f223d;
+  --white: #fff;
+  --shadow: 0 12px 34px rgba(0,0,0,.25);
+  --accent1: #ffd86b;
+  --accent2: #ff5ea2;
+  --grad: linear-gradient(90deg, var(--accent1), var(--accent2));
+}
+
+body.about-page{
+  background:
+    /* radial-gradient(1200px 600px at -10% -10%, rgba(255,255,255,0.05), transparent 60%), */
+    /* radial-gradient(900px 500px at 110% -20%, rgba(255,255,255,0.05), transparent 60%), */
+   #07172c;
+  color: var(--white);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Generic helpers (if your global style.css doesn't provide them) */
+.container{width:min(1100px, 92%); margin-inline:auto;}
+.section{padding: clamp(3rem, 4vw, 5rem) 0;}
+.muted{color: var(--muted);}
+.section-title{
+  text-align:center; margin:0 0 1.5rem; font-size:clamp(1.6rem, 1.8vw, 2rem); color:#eef3f8;
+}
+.section-title.align-left{ text-align:left; }
+
+/* NAV overrides */
+/* .nav-wrap{ background: transparent; position: sticky; top:0; z-index: 50; }
+.navbar{ display:flex; align-items:center; justify-content:space-between; padding:.85rem 0; backdrop-filter: blur(8px); }
+.brand{ display:flex; align-items:center; gap:.6rem; color:#fff; text-decoration:none; font-weight:700;}
+.nav-links{ display:flex; gap:1.2rem; list-style:none; margin:0; padding:0;}
+.nav-links a{ color:#dfe6ee; text-decoration:none; font-weight:600;}
+.nav-links a.active{ color:#fff; border-bottom:2px solid transparent; background: rgba(255,255,255,.08); padding:.35rem .7rem; border-radius:999px;}
+.menu-btn{ display:none; background:none; border:0; color:#fff; font-size:1.15rem;}
+@media (max-width: 860px){
+  .menu-btn{display:block;}
+  .nav-links{position:absolute; right:1rem; top:64px; background:#0c1d35; border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:1rem; flex-direction:column; display:none;}
+  .nav-links.open{display:flex;}
+} */
+
+/* BUTTONS */
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem; font-weight:700;
+  padding:.85rem 1.1rem; border-radius:999px; text-decoration:none; transition:.25s ease;
+  border:1px solid rgba(255,255,255,.12); color:#dbe6f6;
+}
+.btn-primary{
+  background: var(--grad); color:#101523; border:0; box-shadow: var(--shadow);
+}
+.btn-primary:hover{ filter:brightness(1.05); transform: translateY(-1px); }
+.btn-ghost{ background: rgba(255,255,255,.06); }
+.btn-ghost:hover{ background: rgba(255,255,255,.12); }
+
+/* ============ INTRO (the look you liked) ============ */
+.intro-grid{
+  display:grid; grid-template-columns: 1.05fr .95fr; gap:min(4vw, 3rem); align-items:center ; text-align: center;
+}
+@media (max-width: 960px){ .intro-grid{ grid-template-columns: 1fr; } }
+
+.intro-text h1{
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  line-height: 1.15; margin: 0 0 .8rem; color:#fff;
+}
+.intro-text .muted{ line-height:1.75; }
+.bullets{ margin:1.25rem 0 1.5rem; padding:0; list-style:none; }
+.bullets li{ margin:.55rem 0; color:#e9f0f8; }
+.bullets strong{ color:#fff; }
+
+.intro-media .media-card{
+  background: #081b32; border-radius: 18px; box-shadow: var(--shadow); position:relative; overflow:hidden;
+  padding: .75rem .75rem 2.4rem; transform: rotate(-2.2deg);
+}
+.intro-media .media-card img{ width:100%; height:auto; display:block; border-radius: 12px; }
+.media-tag{
+  position:absolute; left:.9rem; right:.9rem; bottom:.7rem;
+  background: var(--grad); color:#111; font-weight:700; padding:.5rem .9rem; border-radius:10px;
+  text-align:left;
+}
+
+/* ============ MISSION & VISION GRID ============ */
+.mv-grid{
+  margin-top: .25rem;
+  display:grid; gap:1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 960px){ .mv-grid{ grid-template-columns: 1fr; } }
+
+.mv-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px; padding: 1.4rem 1.25rem 1.25rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+.mv-card h3{ margin:.6rem 0 .35rem; color:#fff; font-size:1.15rem; }
+.mv-card p{ margin:0; color:var(--muted); line-height:1.7; }
+
+.mv-icon{
+  width:46px; height:46px; display:grid; place-items:center; border-radius:12px;
+  color:#101523; background: var(--grad); box-shadow: 0 6px 14px rgba(255, 112, 158, .35);
+}
+
+/* ============ ABOUT US TWO-COLUMN ============ */
+.about-grid{ display:grid; gap: min(4vw, 2.2rem); grid-template-columns: 1.1fr .9fr; align-items:center; }
+@media (max-width: 960px){ .about-grid{ grid-template-columns: 1fr; } }
+
+.about-text .feature-list{ list-style:none; margin:1.1rem 0 0; padding:0; }
+.feature-list li{ display:flex; align-items:flex-start; gap:.6rem; margin:.7rem 0; color:#e9f0f8; }
+.feature-list .fi{
+  display:grid; place-items:center; flex:0 0 34px; height:34px; border-radius:9px;
+  background: rgba(255,255,255,.07); color:#fff; border:1px solid rgba(255,255,255,.12);
+}
+.about-media .media-card{
+  background:#081b32; border-radius: 18px; padding:.75rem;
+  box-shadow: var(--shadow);
+}
+.about-media img{ border-radius:12px; display:block; width:100%; height:auto; }
+
+/* ============ HISTORY (appealing horizontal rail) ============ */
+.history-rail{
+  margin-top: 1rem;
+  display:flex; gap:1rem; overflow-x:auto; padding:1.2rem .6rem;
+  scroll-snap-type: x mandatory;
+  border-radius: 16px;
+  position:relative;
+  background:
+    radial-gradient(120px 60px at 0% 50%, rgba(0,0,0,.35), transparent 60%),
+    radial-gradient(120px 60px at 100% 50%, rgba(0,0,0,.35), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.08);
+}
+.history-rail::before{
+  content:""; position:absolute; left:12px; right:12px; top:42px; height:4px;
+  background: var(--grad); filter: blur(.2px);
+  border-radius: 999px;
+}
+
+.milestone{
+  scroll-snap-align: start;
+  min-width: 240px; max-width: 260px;
+  background:#0b1f38; border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; padding:1rem; position:relative; box-shadow: 0 8px 18px rgba(0,0,0,.22);
+}
+.milestone .badge{
+  width:40px; height:40px; display:grid; place-items:center; border-radius:10px;
+  background:#0d2646; color:#fff; border:1px solid rgba(255,255,255,.12);
+  position:absolute; left:1rem; top:-20px;
+}
+.milestone h3{ margin:1.2rem 0 .3rem; color: var(--accent2); font-size:1.1rem; }
+.milestone p{ margin:0; color:var(--muted); line-height:1.6; }
+
+.rail-hint{ margin-top:.6rem; text-align:center; }
+
+/* Subtle entrance (no heavy libs) */
+[data-reveal]{ animation: fadeUp .5s ease-out both; }
+@keyframes fadeUp{
+  from{ opacity:0; transform: translateY(10px); }
+  to{ opacity:1; transform:none; }
+}
+
+/* Tilt on big card only when hover + not reduced motion */
+@media (hover:hover) and (prefers-reduced-motion: no-preference){
+  .tilt:hover{ transform: rotate(-1deg) translateY(-2px); }
+}
