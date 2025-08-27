@@ -1,7 +1,7 @@
 {
-  "name": "grace-fellowship-site",
+  "name": "christ-generals-site",
   "version": "1.0.0",
-  "description": "Grace Fellowship — responsive site with contact backend",
+  "description": "Christ Generals — responsive site with contact backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
