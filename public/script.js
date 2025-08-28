@@ -12,13 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const navList = $('#navList');
   const navbar = $('.navbar');
 
-  if (menuBtn && navList) {
-    menuBtn.addEventListener('click', () => {
-      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!expanded));
-      navList.classList.toggle('show');
-    });
-  }
+ if (menuBtn && navList) {
+  menuBtn.addEventListener('click', () => {
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!expanded));
+    navList.classList.toggle('show');
+
+    // toggle animation class
+    menuBtn.classList.toggle('open');
+  });
+}
+
 
   if (navbar) {
     window.addEventListener('scroll', () => {
