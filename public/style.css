@@ -195,7 +195,7 @@ body{
 
 
 /* ✅ TESTIMONY GRID */
-.testimony-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+.testimony-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
 .testimony{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:22px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,0.4);transition:transform .3s ease}
 .testimony:hover{transform:translateY(-6px)}
 
