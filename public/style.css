@@ -195,7 +195,7 @@ body{
 
 
 /* ✅ TESTIMONY GRID */
-.testimony-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+.testimony-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px; width:100%}
 .testimony{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:22px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,0.4);transition:transform .3s ease}
 .testimony:hover{transform:translateY(-6px)}
 
@@ -533,7 +533,6 @@ body{
   }
 }
 
-
 .slider {
     --width: 25%;   /* ~4 items visible on desktop */
     --height: 450px;
@@ -548,7 +547,7 @@ body{
         transparent,
         #000 10% 90%,
         transparent
-    );
+    );padding-top: -90px;
 }
 
 .slider .list {
@@ -564,7 +563,7 @@ body{
     position: absolute;
     left: 100%;
     animation: autoRun 20s linear infinite;
-    transition: filter 0.5s, transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, border-radius 0.6s ease-in-out;
+    transition: filter 0.5s, transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, border-radius 0.6s ease-in-out, margin 0.6s ease-in-out;
     animation-delay: calc(
         (20s / var(--quantity)) * (var(--position) - 1) - 20s
     ) !important;
@@ -578,19 +577,23 @@ body{
     transition: inherit;
 }
 
-/* ✨ Hover Effect for Desktop */
-.slider .item:hover {
-    filter: grayscale(0);
-    transform: scale(1.2) translateY(-25px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    border-radius: 20px; /* keep rounded corners when zoomed */
-}
+/* ✨ Hover Effect (DESKTOP only) */
+@media (hover: hover) and (pointer: fine) {
+    /* When hovering over the whole slider → all images go grayscale */
+    .slider:hover .item {
+        animation-play-state: paused !important;
+        filter: grayscale(1);
+    }
 
-/* Pause animation when hovering over slider */
-.slider:hover .item {
-    animation-play-state: paused !important;
-    filter: grayscale(1);
+    /* The hovered item restores color + grows bigger */
+    .slider .item:hover {
+        filter: grayscale(0);
+        transform: scale(1.2) translateY(-25px);
+        margin: 0 20px; /* Added spacing to prevent overlap */
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        border-radius: 20px; /* keep rounded corners when zoomed */
+    }
 }
 
 /* Reverse direction option */
@@ -611,6 +614,7 @@ body{
 main {
     width: min(1200px, 90vw);
     margin: auto;
+    padding-top: -90px;
 }
 
 /* 📱 Responsive Breakpoints */
@@ -619,14 +623,17 @@ main {
         --width: 33.33%;  /* 3 items visible on mobile */
         --height: 250px;  /* smaller images */
     }
+    /* Add grayscale effect for mobile */
+    .slider:hover .item {
+        animation-play-state: paused !important;
+        filter: grayscale(1);
+    }
 
-    /* 👆 Touch effect on mobile */
-    .slider .item:active {
+    .slider .item:hover {
         filter: grayscale(0);
-        transform: scale(1.2) translateY(-20px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-        z-index: 10;
-        border-radius: 20px;
+        transform: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
     }
 }
 
@@ -636,4 +643,3 @@ main {
         --height: 500px;  /* bigger images */
     }
 }
-
