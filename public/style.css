@@ -17,6 +17,42 @@
   --accent2: #ff5ea2;
   --grad: linear-gradient(90deg, var(--accent1), var(--accent2));
 }
+
+/* DAILY DEVOTIONS */
+#devotions {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  margin: 3rem 0;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+#devotions h2 {
+  margin-bottom: 0.5rem;
+  color: var(--accent2);
+}
+
+#devotions .verse-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#devotions #verseText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+#devotions #verseReference {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--accent1);
+}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -202,8 +238,9 @@ body{
 /* EVENTS */
 .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 .event-card{display:flex;gap:12px;align-items:center;padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));box-shadow:0 14px 36px rgba(2,6,23,0.45)}
-.event-date{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:14px;border-radius:10px;color:#081225;font-weight:700;min-width:68px;text-align:center}
-.event-date span{display:block;font-size:22px}
+.event-date{background:linear-gradient(135deg,#ff6b35,#f7931e);padding:16px 12px;border-radius:12px;color:#fff;font-weight:700;min-width:100px;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;overflow:hidden}
+.event-date::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));border-radius:12px}
+.event-date span{display:block;font-size:20px;font-weight:600;margin-top:4px}
 
 /* ✅ CONTACT */
 /* .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}

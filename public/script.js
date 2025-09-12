@@ -168,4 +168,41 @@ if (contactForm && formStatus && sendBtn) {
     }
   });
 }
+
+// ==================== DAILY DEVOTIONS ====================
+const verses = [
+  { text: "For I know the plans I have for you, declares the LORD, plans for welfare and not for evil, to give you a future and a hope.", reference: "Jeremiah 29:11" },
+  { text: "I can do all things through him who strengthens me.", reference: "Philippians 4:13" },
+  { text: "Trust in the LORD with all your heart, and do not lean on your own understanding.", reference: "Proverbs 3:5" },
+  { text: "The LORD is my shepherd; I shall not want.", reference: "Psalm 23:1" },
+  { text: "Be strong and courageous. Do not be frightened, and do not be dismayed, for the LORD your God is with you wherever you go.", reference: "Joshua 1:9" },
+  { text: "But they who wait for the LORD shall renew their strength; they shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint.", reference: "Isaiah 40:31" },
+  { text: "And we know that for those who love God all things work together for good, for those who are called according to his purpose.", reference: "Romans 8:28" },
+  { text: "Your word is a lamp to my feet and a light to my path.", reference: "Psalm 119:105" },
+  { text: "Come to me, all who labor and are heavy laden, and I will give you rest.", reference: "Matthew 11:28" },
+  { text: "Rejoice in hope, be patient in tribulation, be constant in prayer.", reference: "Romans 12:12" }
+];
+
+let currentVerseIndex = 0;
+
+function showVerse(index) {
+  const verseTextEl = document.getElementById('verseText');
+  const verseRefEl = document.getElementById('verseReference');
+  if (!verseTextEl || !verseRefEl) return;
+
+  const verse = verses[index];
+  verseTextEl.textContent = verse.text;
+  verseRefEl.textContent = `— ${verse.reference}`;
+}
+
+function cycleVerses() {
+  showVerse(currentVerseIndex);
+  currentVerseIndex = (currentVerseIndex + 1) % verses.length;
+}
+
+// Initial display
+cycleVerses();
+
+// Change verse every 2 minutes (120000 ms)
+setInterval(cycleVerses, 120000);
 });
