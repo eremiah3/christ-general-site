@@ -1,8 +1,5 @@
-# TODO: Add Daily Devotions Section
-
-- [x] Add Daily Devotions section to public/index.html after the about section
-- [x] Add Bible verses array and cycling logic to public/script.js
-- [x] Add CSS styles for the devotions section in public/style.css
-- [x] Update events section with new events
-- [x] Style the event date well (increased width to 100px, bold orange-red gradient)
-- [ ] Test the functionality by running the server and checking the verse changes every 2 minutes
+- [x] Add 10-15 more Bible verses to the verses array in script.js
+- [x] Change setInterval from 120000ms to 40000ms
+- [x] Enhance styling in style.css: add 3D perspective, transforms, animations, better typography, hover effects, and mobile responsiveness
+- [x] Improve responsiveness for daily devotions on all screen sizes
+- [x] Add typing effect to daily devotions verses

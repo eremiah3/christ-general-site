@@ -26,6 +26,19 @@
   margin: 3rem 0;
   box-shadow: var(--shadow);
   text-align: center;
+  perspective: 1000px; /* 3D perspective */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Full width on desktop */
+@media (min-width: 1200px) {
+  #devotions {
+    max-width: none;
+    width: 100%;
+    padding: 3rem 4rem;
+  }
 }
 
 #devotions h2 {
@@ -39,6 +52,17 @@
   padding: 1.5rem 2rem;
   margin-top: 1rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transform-style: preserve-3d;
+  transform: rotateX(5deg) rotateY(-5deg);
+  transition: transform 0.5s ease;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#devotions .verse-card:hover {
+  transform: rotateX(0deg) rotateY(0deg) translateY(-10px);
 }
 
 #devotions #verseText {
@@ -46,12 +70,28 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--white);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  line-height: 1.4;
 }
 
 #devotions #verseReference {
   font-size: 1rem;
   font-style: italic;
   color: var(--accent1);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  line-height: 1.2;
+}
+
+#devotions #verseText.fade-out,
+#devotions #verseReference.fade-out {
+  opacity: 0;
+}
+
+#devotions #verseText.fade-in,
+#devotions #verseReference.fade-in {
+  opacity: 1;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -308,7 +348,7 @@ body{
   .events-grid{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr 300px}
 }
-@media(max-width:960px){
+@media(max-width: 960px){
   .contact-grid{grid-template-columns:1fr}
   .contact-card{padding:18px}
   .about-section .about-grid{grid-template-columns:1fr;gap:24px}
@@ -316,9 +356,23 @@ body{
   .hero h1{font-size:clamp(26px,4vw,40px)}
   .testimonyTitle{
     margin-top: 30px;
-  } 
+  }
+  #devotions {
+    max-width: 90vw;
+    padding: 1.5rem 1.5rem;
+  }
+  #devotions .verse-card {
+    padding: 1rem 1.25rem;
+    min-height: 120px;
+  }
+  #devotions #verseText {
+    font-size: 1.1rem;
+  }
+  #devotions #verseReference {
+    font-size: 0.9rem;
+  }
 }
-@media(max-width:760px){
+@media(max-width: 760px){
   .menu-btn{ display: flex;}
   .nav-links{display:none;position:absolute;right:12px;top:62px;flex-direction:column;background:linear-gradient(180deg,rgba(7,10,19,0.96),rgba(7,10,19,0.98));padding:12px;border-radius:10px;width:220px}
   .nav-links.show{display:flex}
@@ -332,7 +386,21 @@ body{
   .testimonies{padding:16px}
   .testimonyTitle{
     margin-top: 30px;
-  } 
+  }
+  #devotions {
+    max-width: 95vw;
+    padding: 1.25rem 1.25rem;
+  }
+  #devotions .verse-card {
+    padding: 1rem 1rem;
+    min-height: 110px;
+  }
+  #devotions #verseText {
+    font-size: 1rem;
+  }
+  #devotions #verseReference {
+    font-size: 0.85rem;
+  }
 }
 @media(max-width:600px){
   .contact-card{padding:14px}

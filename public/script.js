@@ -180,7 +180,17 @@ const verses = [
   { text: "And we know that for those who love God all things work together for good, for those who are called according to his purpose.", reference: "Romans 8:28" },
   { text: "Your word is a lamp to my feet and a light to my path.", reference: "Psalm 119:105" },
   { text: "Come to me, all who labor and are heavy laden, and I will give you rest.", reference: "Matthew 11:28" },
-  { text: "Rejoice in hope, be patient in tribulation, be constant in prayer.", reference: "Romans 12:12" }
+  { text: "Rejoice in hope, be patient in tribulation, be constant in prayer.", reference: "Romans 12:12" },
+  { text: "The LORD is near to the brokenhearted and saves the crushed in spirit.", reference: "Psalm 34:18" },
+  { text: "Cast all your anxiety on him because he cares for you.", reference: "1 Peter 5:7" },
+  { text: "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.", reference: "John 3:16" },
+  { text: "Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!", reference: "Psalm 46:10" },
+  { text: "The steadfast love of the LORD never ceases; his mercies never come to an end.", reference: "Lamentations 3:22" },
+  { text: "I have said these things to you, that in me you may have peace. In the world you will have tribulation. But take heart; I have overcome the world.", reference: "John 16:33" },
+  { text: "Let the words of my mouth and the meditation of my heart be acceptable in your sight, O LORD, my rock and my redeemer.", reference: "Psalm 19:14" },
+  { text: "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.", reference: "2 Corinthians 5:17" },
+  { text: "And let us not grow weary of doing good, for in due season we will reap, if we do not give up.", reference: "Galatians 6:9" },
+  { text: "Seek first the kingdom of God and his righteousness, and all these things will be added to you.", reference: "Matthew 6:33" }
 ];
 
 let currentVerseIndex = 0;
@@ -190,9 +200,42 @@ function showVerse(index) {
   const verseRefEl = document.getElementById('verseReference');
   if (!verseTextEl || !verseRefEl) return;
 
-  const verse = verses[index];
-  verseTextEl.textContent = verse.text;
-  verseRefEl.textContent = `— ${verse.reference}`;
+  // Typing effect function
+  function typeText(element, text, delay = 30) {
+    element.textContent = '';
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, delay);
+      }
+    }
+    type();
+  }
+
+  // Add fade-out class
+  verseTextEl.classList.add('fade-out');
+  verseRefEl.classList.add('fade-out');
+
+  setTimeout(() => {
+    const verse = verses[index];
+    // Use typing effect for verse text and reference
+    typeText(verseTextEl, verse.text);
+    typeText(verseRefEl, `— ${verse.reference}`);
+
+    // Remove fade-out and add fade-in
+    verseTextEl.classList.remove('fade-out');
+    verseRefEl.classList.remove('fade-out');
+    verseTextEl.classList.add('fade-in');
+    verseRefEl.classList.add('fade-in');
+
+    // Remove fade-in after animation
+    setTimeout(() => {
+      verseTextEl.classList.remove('fade-in');
+      verseRefEl.classList.remove('fade-in');
+    }, 500);
+  }, 250);
 }
 
 function cycleVerses() {
@@ -203,6 +246,6 @@ function cycleVerses() {
 // Initial display
 cycleVerses();
 
-// Change verse every 2 minutes (120000 ms)
-setInterval(cycleVerses, 120000);
+// Change verse every 40 seconds (40000 ms)
+setInterval(cycleVerses, 30000);
 });
